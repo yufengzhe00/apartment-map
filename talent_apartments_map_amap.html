@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b0afbf0538b621010ed2124a7c2226c2 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+<div style="position: fixed; top: 10px; left: 50%; transform: translateX(-50%); 
+    z-index: 9999; background: white; padding: 10px 20px; border-radius: 5px; 
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);">
+    <h3 style="margin: 0;">郑州人才公寓分布图</h3>
+</div>
+    
+            <div class="folium-map" id="map_b0afbf0538b621010ed2124a7c2226c2" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b0afbf0538b621010ed2124a7c2226c2 = L.map(
+                "map_b0afbf0538b621010ed2124a7c2226c2",
+                {
+                    center: [34.76, 113.65],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_0acd374a5fcf9642b03c5c4bbeac96f9 = L.tileLayer(
+                "https://webrd02.is.autonavi.com/appmaptile?lang=zh_cn\u0026size=1\u0026scale=1\u0026style=8\u0026x={x}\u0026y={y}\u0026z={z}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.amap.com/\"\u003e\u9ad8\u5fb7\u5730\u56fe\u003c/a\u003e",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_0acd374a5fcf9642b03c5c4bbeac96f9.addTo(map_b0afbf0538b621010ed2124a7c2226c2);
+        
+    
+            var marker_cluster_c1c2519cee0624ef458aab24017bf383 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_9fa0fb1ae85f41ab6e71885eca54fdf2 = L.marker(
+                [34.7658, 113.6723],
+                {
+}
+            ).addTo(marker_cluster_c1c2519cee0624ef458aab24017bf383);
+        
+    
+            var icon_912f35e49d8a18ee53b91aa9744b8743 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6da832520bbc0c43ba92b84fe7295954 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_02333c0501c92a160a8bbba802505c3d = $(`<div id="html_02333c0501c92a160a8bbba802505c3d" style="width: 100.0%; height: 100.0%;">         <div style='width:200px'>             <h4>金水区公寓A</h4>             <p>区域：金水区</p>             <p>价格：1500元/月</p>         </div>         </div>`)[0];
+                popup_6da832520bbc0c43ba92b84fe7295954.setContent(html_02333c0501c92a160a8bbba802505c3d);
+            
+        
+
+        marker_9fa0fb1ae85f41ab6e71885eca54fdf2.bindPopup(popup_6da832520bbc0c43ba92b84fe7295954)
+        ;
+
+        
+    
+    
+                marker_9fa0fb1ae85f41ab6e71885eca54fdf2.setIcon(icon_912f35e49d8a18ee53b91aa9744b8743);
+            
+    
+            var marker_4d00dd76c2d7b090edf64975b10fa386 = L.marker(
+                [34.7712, 113.7234],
+                {
+}
+            ).addTo(marker_cluster_c1c2519cee0624ef458aab24017bf383);
+        
+    
+            var icon_7a33bc26e20a003a83d366f8cfff8dfe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cf5ecba51bb16d14372289518046a4f9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_07e60426b352ac3dc64ba6474c0d8644 = $(`<div id="html_07e60426b352ac3dc64ba6474c0d8644" style="width: 100.0%; height: 100.0%;">         <div style='width:200px'>             <h4>郑东新区公寓B</h4>             <p>区域：郑东新区</p>             <p>价格：2000元/月</p>         </div>         </div>`)[0];
+                popup_cf5ecba51bb16d14372289518046a4f9.setContent(html_07e60426b352ac3dc64ba6474c0d8644);
+            
+        
+
+        marker_4d00dd76c2d7b090edf64975b10fa386.bindPopup(popup_cf5ecba51bb16d14372289518046a4f9)
+        ;
+
+        
+    
+    
+                marker_4d00dd76c2d7b090edf64975b10fa386.setIcon(icon_7a33bc26e20a003a83d366f8cfff8dfe);
+            
+    
+            var marker_d44417c8c3f56facae6740878a696905 = L.marker(
+                [34.7523, 113.6456],
+                {
+}
+            ).addTo(marker_cluster_c1c2519cee0624ef458aab24017bf383);
+        
+    
+            var icon_8dd284479ee0638ab7c89836da92b708 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d200c1de048c7ebb940ec3f554db8144 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0e3fb33c9f945d2748338cedc70aaf5c = $(`<div id="html_0e3fb33c9f945d2748338cedc70aaf5c" style="width: 100.0%; height: 100.0%;">         <div style='width:200px'>             <h4>二七区公寓C</h4>             <p>区域：二七区</p>             <p>价格：1200元/月</p>         </div>         </div>`)[0];
+                popup_d200c1de048c7ebb940ec3f554db8144.setContent(html_0e3fb33c9f945d2748338cedc70aaf5c);
+            
+        
+
+        marker_d44417c8c3f56facae6740878a696905.bindPopup(popup_d200c1de048c7ebb940ec3f554db8144)
+        ;
+
+        
+    
+    
+                marker_d44417c8c3f56facae6740878a696905.setIcon(icon_8dd284479ee0638ab7c89836da92b708);
+            
+    
+            var marker_9a87837955c5ba7fb29776c326e27ab9 = L.marker(
+                [34.7489, 113.6123],
+                {
+}
+            ).addTo(marker_cluster_c1c2519cee0624ef458aab24017bf383);
+        
+    
+            var icon_a842b884df53eeb779a4a54530787676 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1e98192c58f62f7af6351433cfa6bfd7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f4aed2e97794c496e59f92d2a923dc91 = $(`<div id="html_f4aed2e97794c496e59f92d2a923dc91" style="width: 100.0%; height: 100.0%;">         <div style='width:200px'>             <h4>中原区公寓D</h4>             <p>区域：中原区</p>             <p>价格：1100元/月</p>         </div>         </div>`)[0];
+                popup_1e98192c58f62f7af6351433cfa6bfd7.setContent(html_f4aed2e97794c496e59f92d2a923dc91);
+            
+        
+
+        marker_9a87837955c5ba7fb29776c326e27ab9.bindPopup(popup_1e98192c58f62f7af6351433cfa6bfd7)
+        ;
+
+        
+    
+    
+                marker_9a87837955c5ba7fb29776c326e27ab9.setIcon(icon_a842b884df53eeb779a4a54530787676);
+            
+    
+            var marker_73950100cd1ad05390d4bf384ea6704f = L.marker(
+                [34.7312, 113.6789],
+                {
+}
+            ).addTo(marker_cluster_c1c2519cee0624ef458aab24017bf383);
+        
+    
+            var icon_01406a3429dba0a9b356f1d6e296f470 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7c9e16717ec2553a9f9b0db252af30fd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ff57432bcae68dac251bb738a047a98f = $(`<div id="html_ff57432bcae68dac251bb738a047a98f" style="width: 100.0%; height: 100.0%;">         <div style='width:200px'>             <h4>管城区公寓E</h4>             <p>区域：管城区</p>             <p>价格：1300元/月</p>         </div>         </div>`)[0];
+                popup_7c9e16717ec2553a9f9b0db252af30fd.setContent(html_ff57432bcae68dac251bb738a047a98f);
+            
+        
+
+        marker_73950100cd1ad05390d4bf384ea6704f.bindPopup(popup_7c9e16717ec2553a9f9b0db252af30fd)
+        ;
+
+        
+    
+    
+                marker_73950100cd1ad05390d4bf384ea6704f.setIcon(icon_01406a3429dba0a9b356f1d6e296f470);
+            
+    
+            marker_cluster_c1c2519cee0624ef458aab24017bf383.addTo(map_b0afbf0538b621010ed2124a7c2226c2);
+        
+    
+            var heat_map_38936e4a16f2ca2c67cf089980083ec7 = L.heatLayer(
+                [[34.7658, 113.6723, 1500], [34.7712, 113.7234, 2000], [34.7523, 113.6456, 1200], [34.7489, 113.6123, 1100], [34.7312, 113.6789, 1300]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 18,
+  "radius": 20,
+  "blur": 15,
+}
+            );
+        
+    
+            heat_map_38936e4a16f2ca2c67cf089980083ec7.addTo(map_b0afbf0538b621010ed2124a7c2226c2);
+        
+    
+            var layer_control_7121adbcf0b3a637bbc482ca6281d90f_layers = {
+                base_layers : {
+                    "https://webrd02.is.autonavi.com/appmaptile?lang=zh_cn\u0026size=1\u0026scale=1\u0026style=8\u0026x={x}\u0026y={y}\u0026z={z}" : tile_layer_0acd374a5fcf9642b03c5c4bbeac96f9,
+                },
+                overlays :  {
+                    "\u516c\u5bd3\u4f4d\u7f6e" : marker_cluster_c1c2519cee0624ef458aab24017bf383,
+                    "\u4ef7\u683c\u70ed\u529b\u56fe" : heat_map_38936e4a16f2ca2c67cf089980083ec7,
+                },
+            };
+            let layer_control_7121adbcf0b3a637bbc482ca6281d90f = L.control.layers(
+                layer_control_7121adbcf0b3a637bbc482ca6281d90f_layers.base_layers,
+                layer_control_7121adbcf0b3a637bbc482ca6281d90f_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_b0afbf0538b621010ed2124a7c2226c2);
+
+        
+</script>
+</html>
